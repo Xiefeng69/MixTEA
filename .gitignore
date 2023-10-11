@@ -1,0 +1,12 @@
+src/__pycache__
+__pycache__
+save
+result
+args
+.ipynb_checkpoints
+data/glove.6B.300d.txt
+data/glove.42B.300d.txt
+data/glove.840B.300d.txt
+data/fr_en.pkl
+data/ja_en.pkl
+data/zh_en.pkl
