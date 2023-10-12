@@ -131,12 +131,12 @@ def get_act_function(activate_function):
         return None
     return activate_function
 
-def eval_entity_alignment(Lvec, Rvec, test_num, k, eval_normalize=True):
+def eval_entity_alignment(Lvec, Rvec, test_num, k, eval_normalize=True, **kwargs):
     '''calculate evaluation metrics: hit@1, hit@k, MRR, Mean etc.'''
     if eval_normalize:
         Lvec = preprocessing.normalize(Lvec)
         Rvec = preprocessing.normalize(Rvec)
-    sim = cal_distance(Lvec, Rvec, sim_measure="cityblock")
+    sim = cal_distance(Lvec, Rvec, sim_measure="cosine")
     top_k=(1, k)
     mr = 0
     mrr = 0
